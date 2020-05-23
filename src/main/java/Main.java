@@ -1,8 +1,17 @@
 import redis.RedisClient;
 
+import java.util.Arrays;
+import java.util.List;
+
 public class Main {
     public static void main(String[] args) {
-        RedisClient.getInstance().initConnection("redis://127.0.0.1:6379", "password");
+        List<String> addresses = Arrays.asList(
+                "redis://1.1.1.1:26379",
+                "redis://2.2.2.2:26379",
+                "redis://3.3.3.3:26379");
+        RedisClient.getInstance().initConnection(addresses,
+                "password",
+                "redismaster");
         RefreshCache refreshCache = new RefreshCache();
 
         refreshCache.subscribe(() -> {
