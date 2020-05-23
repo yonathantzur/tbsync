@@ -51,7 +51,7 @@ public class RedisClient {
     }
 
     public void publish(String topicName, String message) {
-        RTopic topic = redis.getTopic(topicName);
+        RTopic topic = this.redis.getTopic(topicName);
         topic.publish(message);
     }
 
