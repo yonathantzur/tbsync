@@ -1,4 +1,5 @@
-import redis.RedisClient;
+import sync.redis.RedisClient;
+import sync.RefreshCache;
 
 import java.util.Arrays;
 import java.util.List;

@@ -1,4 +1,4 @@
-package redis;
+package sync.redis;
 
 import org.redisson.Redisson;
 import org.redisson.api.RTopic;

@@ -1,4 +1,6 @@
-import redis.RedisClient;
+package sync;
+
+import sync.redis.RedisClient;
 
 public abstract class Sync {
     private String topicName;
